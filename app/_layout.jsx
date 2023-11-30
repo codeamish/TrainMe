@@ -3,7 +3,7 @@ import React from "react";
 import { Stack } from "expo-router";
 
 export default function _layout() {
-  LogBox.ignoreLogs(["warning: Failed prop type"])
+  LogBox.ignoreLogs(["warning: Failed prop type"]);
   return (
     <Stack
       screenOptions={{
@@ -16,6 +16,9 @@ export default function _layout() {
           presentation: "fullScreenModal",
         }}
       />
+      <Stack.Screen name="exerciseDetails" options={{
+        presentation: 'modal'
+      }} />
     </Stack>
   );
 }
