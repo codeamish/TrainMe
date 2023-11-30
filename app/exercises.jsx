@@ -18,13 +18,13 @@ export default function Exercises() {
   const router = useRouter();
   const item = useLocalSearchParams();
 
-  const [exercises, setExercises] = React.useState(demoExercises);
+  const [exercises, setExercises] = React.useState([]);
 
 
   useEffect(() => {
-    // if (item) {
-    //   getExercises(item.name);
-    // }
+    if (item) {
+      getExercises(item.name);
+    }
     
   }, [item]);
 
